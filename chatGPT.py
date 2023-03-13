@@ -56,14 +56,16 @@ def fact(n):
         f = f * i
     return f
 
-#def letCount(s):
+def letCount(s):
+    s = input()
+    d = {}
+    for i in s:
+        
 
 def condense(words):
     out = ""
     for i in words:
         out.append(words[i] + " ")
-    
-    
     
 def even(n):
     seq = [0]
@@ -101,8 +103,19 @@ def divide(n):
     for i in range (1, n):
         if n%i == 0:
             yield i
+            
+def letter(n):
+    l = [i for i in n if 'm' in i[0]]
+    print(l)
 
 def dotProd(a, b):
     return sum(i[0] * i[1] for i in zip(a, b))
+
+def palindrome(n):
+    l = [i for i in n if i[::-1] in n]
+    print(l)
     
-    
+def booList(n):
+    d = {i:True for i in n if (i%2)==0}
+    print(d)
+
